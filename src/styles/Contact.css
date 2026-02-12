@@ -1,0 +1,177 @@
+/* Contact Page Styles */
+
+/* Main Grid Layout: Left Column (Info/Address) and Right Column (Form) */
+.contact-main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin: 30px 0;
+    align-items: start;
+}
+
+/* Left Column: Contact Info and Address */
+.contact-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-info-box,
+.address-box {
+    padding: 0;
+    background: transparent;
+}
+
+.contact-info-box h2,
+.address-box h2 {
+    color: #0369a1;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-info-box p,
+.address-box p {
+    margin: 8px 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Right Column: Contact Form Section */
+.contact-form-section {
+    width: 100%;
+}
+
+.contact-form-section h2 {
+    color: #0369a1;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.contact-form {
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #0ea5e9, #0369a1);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+    width: fit-content;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+}
+
+.success-message {
+    background: #d1fae5;
+    border: 2px solid #10b981;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.success-message p {
+    color: #065f46;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Full Width Map Section */
+.map-section-full {
+    margin: 40px 0 0 0;
+    width: 100%;
+}
+
+.map-section-full h2 {
+    color: #0369a1;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .contact-main-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .contact-info-box h2,
+    .address-box h2 {
+        font-size: 18px;
+    }
+
+    .contact-form-section h2,
+    .map-section-full h2 {
+        font-size: 20px;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}

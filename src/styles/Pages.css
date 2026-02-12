@@ -1,0 +1,361 @@
+/* Content Section */
+.content-section {
+  width: 100%;
+  padding: 60px 80px;
+  background: #ffffff;
+  min-height: calc(100vh - 80px);
+  /* Full height minus navbar */
+  flex: 1;
+}
+
+.content-section h1 {
+  color: #0369a1;
+  margin-bottom: 25px;
+  font-size: 32px;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.content-section h2 {
+  color: #0c4a6e;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.content-section h3 {
+  color: #0369a1;
+  margin-bottom: 12px;
+}
+
+.content-section p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #334155;
+}
+
+.content-section ul {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.content-section li {
+  line-height: 1.8;
+  margin-bottom: 10px;
+  color: #334155;
+}
+
+
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 60px 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h3 {
+  color: #0369a1;
+  font-size: 24px;
+  margin: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cta-box {
+  background: transparent;
+  color: #333;
+  padding: 20px 0;
+  border-radius: 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.cta-box h3 {
+  color: #0369a1;
+  margin-bottom: 15px;
+}
+
+.contact-details {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border-left: 5px solid #0ea5e9;
+}
+
+.person-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content-section {
+    padding: 50px 40px;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .content-section h1 {
+    font-size: 28px;
+  }
+
+  .content-section h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-section {
+    padding: 40px 30px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .service-card {
+    padding: 40px 20px;
+  }
+
+  .content-section h1 {
+    font-size: 24px;
+  }
+
+  .content-section h2 {
+    font-size: 20px;
+  }
+
+  .content-section p {
+    font-size: 15px;
+  }
+
+  .cta-box {
+    padding: 30px 20px;
+  }
+
+  .contact-details {
+    padding: 20px;
+  }
+
+  .person-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-section {
+    padding: 30px 20px;
+  }
+
+  .content-section h1 {
+    font-size: 22px;
+  }
+
+  .service-card {
+    padding: 30px 15px;
+  }
+
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Leadership Grid */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.leader-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.leader-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  /* 1:1 Aspect Ratio */
+  overflow: hidden;
+}
+
+.leader-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.leader-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  opacity: 0;
+}
+
+.leader-card:hover .leader-image {
+  transform: scale(1.1);
+}
+
+.leader-card:hover .leader-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.leader-overlay h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.leader-overlay p {
+  color: #e2e8f0;
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Clients & Partners Page Styles */
+
+/* Header Area */
+.clients-intro {
+  max-width: 100%;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+/* Grid Layout */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Individual Card Styling */
+.client-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eef2f6;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Content */
+.client-header {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 15px;
+}
+
+.client-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 5px 0;
+}
+
+.client-link {
+  font-size: 0.9rem;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+.client-link:hover {
+  text-decoration: underline;
+}
+
+.client-description {
+  color: #64748b;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Alignment Story Box */
+.partnership-story {
+  margin-top: auto;
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.partnership-story h4 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.partnership-story p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #334155;
+  line-height: 1.6;
+}
