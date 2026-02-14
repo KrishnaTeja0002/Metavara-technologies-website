@@ -75,6 +75,28 @@ const OurPartners = () => {
             </p>
           </div>
         </div>
+
+
+        {/* Partner 4: Deliverain */}
+        <div className="client-card">
+          <div className="client-header">
+            <h3 className="client-name">Deliverain</h3>
+            <a href="https://deliverain.com/index.html" target="_blank" rel="noopener noreferrer" className="client-link">
+              Visit Website →
+            </a>
+          </div>
+          <p className="client-description">
+            A dynamic logistics and supply chain optimization platform delivering seamless last-mile connectivity.
+          </p>
+          <div className="partnership-story">
+            <h4>Operational Excellence</h4>
+            <p>
+              Logistics is the backbone of modern commerce. By partnering with Deliverain, we bring cutting-edge
+              route optimization and real-time tracking capabilities to our supply chain solutions, ensuring
+              efficiency and transparency at every step of the delivery process.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

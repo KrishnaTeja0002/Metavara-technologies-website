@@ -32,8 +32,10 @@ const Navigation = () => {
             <span className="logo-technologies">TECHNOLOGIES</span>
           </span>
         </Link>
-        <button className="menu-toggle" onClick={toggleMobileMenu}>
-          ☰
+        <button className={`menu-toggle ${mobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
         </button>
         <ul className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`} id="navMenu">
           <li className="nav-item">
